@@ -1,0 +1,9 @@
+version: "2.1"
+services:
+    hadoop:
+        image: harisekhon/hadoop:2.9
+        volumes:
+            - ./config:/tmp/hadoop
+        command: ['/tmp/hadoop/hadoop-entrypoint-wrapper.sh']
+        ports:
+            - "18020:8020"
